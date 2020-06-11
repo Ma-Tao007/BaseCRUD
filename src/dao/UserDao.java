@@ -61,13 +61,14 @@ public class UserDao {
 	public boolean insert(User user){
 		boolean f = false;
         String sql = "insert into user(xi,qudui,username,sno) values('"+user.getXi()+"'"
-        		+ ","+user.getQudui()+","+user.getUsername()+",'"+user.getSno()+"')";
+        		+ ",'"+user.getQudui()+"','"+user.getUsername()+"','"+user.getSno()+"')";
         
         Connection conn = DBUtil.getConn();
         Statement state = null;
         int a = 0;
         try {
             state = conn.createStatement();
+            System.out.println(sql);
             a = state.executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();

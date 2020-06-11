@@ -11,13 +11,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action='user?method=register' method="post" onsubmit="return regist()">
-		姓名：<input name='username' id='username'>
+	<form action='user?method=update' method="post" onsubmit="return regist()">
+		姓名：<input name='username' id='username'  value="${user.username }"> 
 		<br>
-		学号：<input type="password" name='sno' id='sno'><br>
-		系别：<input type="text" name='xi' id='xi'><br>
-		区队：<input type="text" name='qudui' id='qudui'><br>
-		<button>注册</button>
+		学号：<input type="password" name='sno'  id='sno' value="${user.sno }"><br>
+		系别：<input type="text" name='xi'  id='xi' value="${user.xi }"><br>
+		区队：<input type="text" name='qudui'  id='qudui' value="${user.qudui }"><br>
+		<input hidden name='id' value="${user.id }">
+		<button>修改</button>
 	</form>
 </body>
 </html>

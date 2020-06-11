@@ -11,21 +11,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action='user?method=login' method="post" onsubmit="return login()">
-		用户名：<input name='username' id='username'>
+	<form action='user?method=register' onsubmit="return regist()">
+		姓名：<input name='username' id='username' readonly value="${user.username }"> 
 		<br>
-		密码：<input type="password" name='sno' id='sno'><br>
-		<button>登陆</button>
+		学号：<input type="password" name='sno' readonly id='sno' value="${user.sno }"><br>
+		系别：<input type="text" name='xi' readonly id='xi' value="${user.xi }"><br>
+		区队：<input type="text" name='qudui' readonly id='qudui' value="${user.qudui }"><br>
 	</form>
 </body>
 </html>
-<script>
-	function login(){
-		var username = document.getElementById("username")
-		var sno = document.getElementById("sno")
-		if(username.value=='' || sno.value==''){
-			alert("请输入用户名和密码")
-			return false
-		}
-	}
-</script>

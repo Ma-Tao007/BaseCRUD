@@ -25,9 +25,9 @@
 <body>
 <h2>欢迎您：${username }</h2>
 <div>
-	<button>登陆</button>
+	<button onClick="location.href='user?method=loginPage'">登陆</button>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<button>注册</button>
+	<button onClick="location.href='user?method=registPage'">注册</button>
 </div>
 	<table cellspacing="0" width="500px" border="1px" style="text-align: center">
 		<thead>
@@ -49,8 +49,8 @@
 					<td>${item.sno}</td>
 					<td>${item.username}</td>
 					<td>
-						<a  href="location.href='user?method=editPage&id=${item.id}'">修改</a>
-						<a  href="location.href='user?method=showPage&id=${item.id}'">查看</a>
+						<a  href="user?method=editPage&id=${item.id}&type=2">修改</a>
+						<a  href="user?method=editPage&id=${item.id}&type=1">查看</a>
 					</td>
 				</tr>
 			</c:forEach>

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2020-06-11 15:00:49
+Date: 2020-06-11 16:00:46
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,9 +26,13 @@ CREATE TABLE `user` (
   `username` varchar(255) DEFAULT NULL,
   `sno` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('1', '计算机', '区队1', 'maker', 's001');
+INSERT INTO `user` VALUES ('2', '333', 'aa', '123456', '123456');
+INSERT INTO `user` VALUES ('3', 'dd', 'aa', '123456', '123456');
+INSERT INTO `user` VALUES ('4', 'dd', 'aa', '123456', '123456');
+INSERT INTO `user` VALUES ('9', '信息技术与管理系', '信安183', '朱匡易', '201811062');
